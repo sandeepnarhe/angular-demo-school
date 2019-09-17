@@ -1,0 +1,21 @@
+
+
+<div class="container mb-4">
+        <h2> Add New School</h2>
+        <h5 class="text-success">{{message}}</h5>
+    <form >
+        <div class="form-group">
+            <label for="my-input">School Name</label>
+            <input id="my-input" class="form-control" type="text" name="name" [(ngModel)]="currentSchool.name">
+        </div>
+        <div class="form-group">
+                <label for="my-input">School City</label>
+                <input id="my-input" class="form-control" type="text" name="city" [(ngModel)]="currentSchool.city">
+            </div>
+
+        <button  *ngIf="!isEdit"  class="btn btn-primary m-2" (click)="addSchool()">Add</button>
+        <button  *ngIf="isEdit" class="btn btn-primary m-2" (click)="updateSchool()">Save</button>
+        <button  class="btn btn-dark m-2"   (click)="clear()">clear</button>
+    </form>
+
+</div>

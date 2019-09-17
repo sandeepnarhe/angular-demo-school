@@ -1,0 +1,28 @@
+<app-navigation></app-navigation>
+
+<app-manageschool [isEdit]="isEdit" (addMsg)="addNewSchoolNotification($event)" [currentSchool] = "currentSchool"></app-manageschool>
+
+<div class="container">
+        <h2> List of Schools in PUNE</h2>
+        <h5 class="text-primary"  >{{deleteMsg}}</h5>
+    <div class="col-md-6">
+            <table class="table table-light">
+                <thead>
+                    <th>Id</th>
+                    <th>name</th>
+                    <th>city</th>
+                    <th>Delete</th>
+                </thead>
+                    <tbody>
+                        <tr *ngFor="let school of schools">
+                            <td> <a (click)="getSchoolDetails(school)"> {{school.id}} </a></td>
+                            <td> {{school.name}} </td>
+                            <td> {{school.city}} </td>
+                            <td><a (click)="deleteSchool(school.id)"> Delete</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+    </div>
+
+</div>
+
