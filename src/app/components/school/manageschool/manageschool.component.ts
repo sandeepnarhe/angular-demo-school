@@ -53,7 +53,6 @@ export class ManageschoolComponent implements OnInit {
   clear(){
     console.log("inside clear!")
     this.isEdit = false;
-    this.ngOnInit();
   }
 
 }

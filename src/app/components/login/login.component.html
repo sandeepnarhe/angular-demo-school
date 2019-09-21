@@ -1,7 +1,7 @@
 <div class="container mt-5">
     <div class="card">
         <h2 class="card-title m">Login School Portal</h2>
-        <span class="text-danger"> <i class="fa fa-remove"></i> {{errorMessage}}</span>
+        <span class="text-danger" *ngIf="errorMessage"> <i class="fa fa-remove"></i> {{errorMessage}}</span>
         <div class="card-body">
             <form  (submit)= "authenticate($event)">
                 <div class="form-group">
